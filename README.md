@@ -101,7 +101,7 @@ versions of Lorem Ipsum.</p>
     - [ ] Opção de salvar pasta em outro lugar.
 - [x] Ao finalizar, criar arquivo com dados do atendimento.
     - [ ] Formatar os dados conforme imagem abaixo.
-    ![ExitFile](D:/Projetos/TimeEntry/TimeEntry/TimeEntry/GitHub/ModeloArquivoSaida.PNG)
+    ![ExitFile](TimeEntry/GitHub/ModeloArquivoSaida.PNG)
     - [ ] Criar arquivo cujo nome seja Ex: 20-02-2022 - Atendimentos.
     - [ ] Salvar todos atendimentos do dia no mesmo arquivos
 
