@@ -79,7 +79,6 @@
             this.txtBoxCompany.Name = "txtBoxCompany";
             this.txtBoxCompany.Size = new System.Drawing.Size(100, 26);
             this.txtBoxCompany.TabIndex = 3;
-            this.txtBoxCompany.Text = "Enesa";
             // 
             // txtBoxProject
             // 
@@ -204,7 +203,6 @@
             this.txtBoxDate.Name = "txtBoxDate";
             this.txtBoxDate.Size = new System.Drawing.Size(110, 26);
             this.txtBoxDate.TabIndex = 24;
-            this.txtBoxDate.Text = "DD/MM/AAAA";
             this.txtBoxDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxTesteTotalHours
@@ -260,7 +258,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 464);
+            this.ClientSize = new System.Drawing.Size(516, 464);
             this.Controls.Add(this.btnFinished);
             this.Controls.Add(this.lblEnd);
             this.Controls.Add(this.lblStart);
