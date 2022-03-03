@@ -92,11 +92,11 @@ namespace TimeEntry
             try
             {
                 string[] lines = { txtBoxDate.Text + " - " + txtBoxCompany.Text + " - " + txtBoxProject.Text + " - " + 
-                        txtBoxOccurrence.Text + " - Total Horas: " + txtBoxTesteTotalHours.Text};
+                        txtBoxOccurrence.Text + " - Total Horas: " + txtBoxTesteTotalHours.Text + " - " + txtBoxServiceDescription.Text };
 
                 //string filePath = @"c:\temp\";
                 string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                string fileName = "20-02-2022.txt";
+                string fileName = txtBoxDate.Text.ToString();
 
                 if (File.Exists(fileName))
                 {

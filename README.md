@@ -74,6 +74,8 @@ versions of Lorem Ipsum.</p>
 # UI Experience
 
 - [ ] Melhorar as cores do aplicativo.
+    - [ ] Tema Dark.
+    - [ ] Outros Temas.
 - [ ] Organizar melhor so botões.
 - [ ] Adicionar imagem da logo.
 
@@ -82,8 +84,7 @@ versions of Lorem Ipsum.</p>
 # Support Functionalities
 
 - [x] Pega data atual (dia/mês/ano).
-    - [ ] Opção de selecionar data. 
-
+    - [ ] Opção de selecionar data.
 - [x] Check box inicio e fim do atendimento.
 - [x] Cálculo de tempo gasto no atendimento.
 - [x] Botão de conclusão do atendimento.
@@ -92,6 +93,8 @@ versions of Lorem Ipsum.</p>
 
 # Project Functionalities
 
+
+
 ---
 
 # File Management
@@ -99,11 +102,11 @@ versions of Lorem Ipsum.</p>
 - [x] Cria pasta com nome da ocorrência.
     - [ ] Opção de ciar ou não pasta da ocorrência.
     - [ ] Opção de salvar pasta em outro lugar.
-- [x] Ao finalizar, criar arquivo com dados do atendimento.
+- [x] Ao finalizar, criar arquivo com dados do atendimento. 
     - [ ] Formatar os dados conforme imagem abaixo.
     ![ExitFile](TimeEntry/GitHub/ModeloArquivoSaida.PNG)
     - [ ] Criar arquivo cujo nome seja Ex: 20-02-2022 - Atendimentos.
-    - [ ] Salvar todos atendimentos do dia no mesmo arquivos
+    - [ ] Salvar todos atendimentos do dia no mesmo arquivos.
 
 ---
 
