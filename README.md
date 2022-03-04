@@ -78,6 +78,7 @@ versions of Lorem Ipsum.</p>
     - [ ] Outros Temas.
 - [ ] Organizar melhor so botões.
 - [ ] Adicionar imagem da logo.
+- [x] Se se as Checkbox Inicio e Fim fores desmarcadas serão zeradas.
 
 ---
 
@@ -106,7 +107,7 @@ versions of Lorem Ipsum.</p>
     - [ ] Formatar os dados conforme imagem abaixo.
     ![ExitFile](TimeEntry/GitHub/ModeloArquivoSaida.PNG)
     - [ ] Criar arquivo cujo nome seja Ex: 20-02-2022 - Atendimentos.
-    - [ ] Salvar todos atendimentos do dia no mesmo arquivos.
+    - [x] Salvar todos atendimentos do dia no mesmo arquivos.
 
 ---
 

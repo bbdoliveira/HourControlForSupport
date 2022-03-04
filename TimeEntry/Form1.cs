@@ -35,6 +35,10 @@ namespace TimeEntry
                 txtBoxServiceStart.Text = DateTime.Now.ToString("HH:mm:ss");
                 StartService = DateTime.Now;
             }
+            else
+            {
+                txtBoxServiceStart.Text = "00:00:00";
+            }
         }
 
         private void dtpTotalHour_ValueChanged(object sender, EventArgs e)
@@ -59,6 +63,10 @@ namespace TimeEntry
                 string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", horasTrabalhadas.Hours,
                     horasTrabalhadas.Minutes, horasTrabalhadas.Seconds, horasTrabalhadas.Milliseconds / 10);
                 txtBoxTesteTotalHours.Text = elapsedTime;
+            }
+            else
+            {
+                txtBoxServiceEnd.Text = "00:00:00";
             }
         }
 
@@ -91,16 +99,39 @@ namespace TimeEntry
 
             try
             {
-                string[] lines = { txtBoxDate.Text + " - " + txtBoxCompany.Text + " - " + txtBoxProject.Text + " - " + 
-                        txtBoxOccurrence.Text + " - Total Horas: " + txtBoxTesteTotalHours.Text + " - " + txtBoxServiceDescription.Text };
+                string[] lines = { txtBoxDate.Text + " - " + txtBoxCompany.Text + " - " + txtBoxProject.Text + " - " + txtBoxOccurrence.Text + " - Total Horas: " + txtBoxTesteTotalHours.Text + " - " + txtBoxServiceDescription.Text };
 
                 //string filePath = @"c:\temp\";
                 string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                string fileName = txtBoxDate.Text.ToString();
+                //string fileName = txtBoxDate.Text.ToString();
+                string fileName = "Marco";
+
+                FileInfo fileInfo = new FileInfo(@"c:\temp\" + fileName + ".txt");
+
+                if (!fileInfo.Exists)
+                {
+                    using (StreamWriter sw = fileInfo.CreateText())
+                    {
+                        foreach (string line in lines)
+                        {
+                            sw.WriteLine(line);
+                        }
+                    }
+                }
+                else
+                {
+                    using (StreamWriter sw = fileInfo.AppendText())
+                    {
+                        foreach (string line in lines)
+                        {
+                            sw.WriteLine(line);
+                        }
+                    }
+                }
 
                 if (File.Exists(fileName))
                 {
-                    using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "20-02-2022.txt"), true))
+                    using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "20 -02-2022.txt"), true))
                     {
                         outputFile.WriteLine(lines);
                     }      

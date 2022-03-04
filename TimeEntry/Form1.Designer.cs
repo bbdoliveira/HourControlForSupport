@@ -101,7 +101,7 @@
             // 
             // txtBoxServiceDescription
             // 
-            this.txtBoxServiceDescription.Location = new System.Drawing.Point(12, 278);
+            this.txtBoxServiceDescription.Location = new System.Drawing.Point(19, 314);
             this.txtBoxServiceDescription.Multiline = true;
             this.txtBoxServiceDescription.Name = "txtBoxServiceDescription";
             this.txtBoxServiceDescription.Size = new System.Drawing.Size(479, 129);
@@ -111,7 +111,7 @@
             // 
             this.lblStartService.AutoSize = true;
             this.lblStartService.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartService.Location = new System.Drawing.Point(54, 121);
+            this.lblStartService.Location = new System.Drawing.Point(61, 157);
             this.lblStartService.Name = "lblStartService";
             this.lblStartService.Size = new System.Drawing.Size(111, 20);
             this.lblStartService.TabIndex = 7;
@@ -121,7 +121,7 @@
             // 
             this.chkBoxServiceStart.AutoSize = true;
             this.chkBoxServiceStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxServiceStart.Location = new System.Drawing.Point(10, 181);
+            this.chkBoxServiceStart.Location = new System.Drawing.Point(17, 217);
             this.chkBoxServiceStart.Name = "chkBoxServiceStart";
             this.chkBoxServiceStart.Size = new System.Drawing.Size(15, 14);
             this.chkBoxServiceStart.TabIndex = 9;
@@ -132,7 +132,7 @@
             // 
             this.chkBoxServiceEnd.AutoSize = true;
             this.chkBoxServiceEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxServiceEnd.Location = new System.Drawing.Point(109, 181);
+            this.chkBoxServiceEnd.Location = new System.Drawing.Point(116, 217);
             this.chkBoxServiceEnd.Name = "chkBoxServiceEnd";
             this.chkBoxServiceEnd.Size = new System.Drawing.Size(15, 14);
             this.chkBoxServiceEnd.TabIndex = 10;
@@ -143,7 +143,7 @@
             // 
             this.lblServiceDescription.AutoSize = true;
             this.lblServiceDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblServiceDescription.Location = new System.Drawing.Point(8, 255);
+            this.lblServiceDescription.Location = new System.Drawing.Point(15, 291);
             this.lblServiceDescription.Name = "lblServiceDescription";
             this.lblServiceDescription.Size = new System.Drawing.Size(226, 20);
             this.lblServiceDescription.TabIndex = 11;
@@ -153,7 +153,7 @@
             // 
             this.lblTotalHour.AutoSize = true;
             this.lblTotalHour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalHour.Location = new System.Drawing.Point(219, 121);
+            this.lblTotalHour.Location = new System.Drawing.Point(226, 157);
             this.lblTotalHour.Name = "lblTotalHour";
             this.lblTotalHour.Size = new System.Drawing.Size(102, 20);
             this.lblTotalHour.TabIndex = 14;
@@ -181,7 +181,7 @@
             // txtBoxServiceStart
             // 
             this.txtBoxServiceStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxServiceStart.Location = new System.Drawing.Point(31, 176);
+            this.txtBoxServiceStart.Location = new System.Drawing.Point(38, 212);
             this.txtBoxServiceStart.Name = "txtBoxServiceStart";
             this.txtBoxServiceStart.Size = new System.Drawing.Size(72, 26);
             this.txtBoxServiceStart.TabIndex = 22;
@@ -190,7 +190,7 @@
             // txtBoxServiceEnd
             // 
             this.txtBoxServiceEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxServiceEnd.Location = new System.Drawing.Point(126, 176);
+            this.txtBoxServiceEnd.Location = new System.Drawing.Point(133, 212);
             this.txtBoxServiceEnd.Name = "txtBoxServiceEnd";
             this.txtBoxServiceEnd.Size = new System.Drawing.Size(72, 26);
             this.txtBoxServiceEnd.TabIndex = 23;
@@ -208,7 +208,7 @@
             // txtBoxTesteTotalHours
             // 
             this.txtBoxTesteTotalHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxTesteTotalHours.Location = new System.Drawing.Point(233, 176);
+            this.txtBoxTesteTotalHours.Location = new System.Drawing.Point(240, 212);
             this.txtBoxTesteTotalHours.Name = "txtBoxTesteTotalHours";
             this.txtBoxTesteTotalHours.Size = new System.Drawing.Size(81, 26);
             this.txtBoxTesteTotalHours.TabIndex = 25;
@@ -219,7 +219,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(207, 179);
+            this.label2.Location = new System.Drawing.Point(214, 215);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(18, 20);
             this.label2.TabIndex = 26;
@@ -228,7 +228,7 @@
             // lblStart
             // 
             this.lblStart.AutoSize = true;
-            this.lblStart.Location = new System.Drawing.Point(46, 160);
+            this.lblStart.Location = new System.Drawing.Point(53, 196);
             this.lblStart.Name = "lblStart";
             this.lblStart.Size = new System.Drawing.Size(34, 13);
             this.lblStart.TabIndex = 27;
@@ -237,7 +237,7 @@
             // lblEnd
             // 
             this.lblEnd.AutoSize = true;
-            this.lblEnd.Location = new System.Drawing.Point(149, 160);
+            this.lblEnd.Location = new System.Drawing.Point(156, 196);
             this.lblEnd.Name = "lblEnd";
             this.lblEnd.Size = new System.Drawing.Size(23, 13);
             this.lblEnd.TabIndex = 28;
@@ -246,7 +246,7 @@
             // btnFinished
             // 
             this.btnFinished.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinished.Location = new System.Drawing.Point(341, 171);
+            this.btnFinished.Location = new System.Drawing.Point(348, 207);
             this.btnFinished.Name = "btnFinished";
             this.btnFinished.Size = new System.Drawing.Size(101, 39);
             this.btnFinished.TabIndex = 29;
@@ -258,7 +258,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 464);
+            this.ClientSize = new System.Drawing.Size(686, 464);
             this.Controls.Add(this.btnFinished);
             this.Controls.Add(this.lblEnd);
             this.Controls.Add(this.lblStart);
