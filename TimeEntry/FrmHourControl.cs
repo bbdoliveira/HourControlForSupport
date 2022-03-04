@@ -22,11 +22,6 @@ namespace TimeEntry
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void chkBoxServiceStart_CheckedChanged(object sender, EventArgs e)
         {
             if (chkBoxServiceStart.Checked == true)
@@ -41,11 +36,6 @@ namespace TimeEntry
             }
         }
 
-        private void dtpTotalHour_ValueChanged(object sender, EventArgs e)
-        {
-            //dtpTotalHour.Text = dtpServiceEnd.Text - dtpServiceStart.Text;
-        }
-
         private void formHourControl_Load(object sender, EventArgs e)
         {
             txtBoxDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
@@ -55,9 +45,7 @@ namespace TimeEntry
         {
             if (chkBoxServiceEnd.Checked == true)
             {
-                //stopwatch.Stop();
                 txtBoxServiceEnd.Text = DateTime.Now.ToString("HH:mm:ss");
-                //txtEndService.Text = DateTime.Now.ToString("HH:mm:ss");
                 EndService = DateTime.Now;
                 TimeSpan horasTrabalhadas = EndService.Subtract(StartService);
                 string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", horasTrabalhadas.Hours,
@@ -66,6 +54,7 @@ namespace TimeEntry
             }
             else
             {
+                //Zera a caixa de EndService caso esteja desmarcado.
                 txtBoxServiceEnd.Text = "00:00:00";
             }
         }
@@ -93,7 +82,7 @@ namespace TimeEntry
                     {
                         //Cria a pasta e mostra uma mensagem confirmando.
                         DirectoryInfo di = Directory.CreateDirectory(directoryPath);
-                        MessageBox.Show("Created a folder for your ocurrence.", "Hour Control", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Pasta Criada!", "Hour Control", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (Exception error)
@@ -106,9 +95,7 @@ namespace TimeEntry
             {
                 string[] lines = { txtBoxDate.Text + " - " + txtBoxCompany.Text + " - " + mskTextBoxProject.Text + " - " + txtBoxOccurrence.Text + " - Total Horas: " + txtBoxTesteTotalHours.Text + " - " + txtBoxServiceDescription.Text };
 
-                //string filePath = @"c:\temp\";
                 string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                //string fileName = txtBoxDate.Text.ToString();
                 string fileName = "Marco";
 
                 FileInfo fileInfo = new FileInfo(@"c:\temp\" + fileName + ".txt");
@@ -120,6 +107,7 @@ namespace TimeEntry
                         foreach (string line in lines)
                         {
                             sw.WriteLine(line);
+                            MessageBox.Show("Criado arquivo com registro de horas!", "Contorle de Horas", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                 }
@@ -130,6 +118,7 @@ namespace TimeEntry
                         foreach (string line in lines)
                         {
                             sw.WriteLine(line);
+                            MessageBox.Show("Seu arquivo de controle de horas foi atualizado!", "Controle de Horas", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                 }
@@ -162,7 +151,6 @@ namespace TimeEntry
         private void txtBoxCompany_TextChanged(object sender, EventArgs e)
         {
             txtBoxCompany.Focus();
-            //txtBoxCompany.Text.ToUpper();
         }
 
         private void chkBoxCreateFolder_CheckedChanged(object sender, EventArgs e)
