@@ -31,7 +31,6 @@
             this.lblData = new System.Windows.Forms.Label();
             this.lblCompany = new System.Windows.Forms.Label();
             this.txtBoxCompany = new System.Windows.Forms.TextBox();
-            this.txtBoxProject = new System.Windows.Forms.TextBox();
             this.lblProject = new System.Windows.Forms.Label();
             this.txtBoxServiceDescription = new System.Windows.Forms.TextBox();
             this.lblStartService = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@
             this.chkBoxCreateFolder = new System.Windows.Forms.CheckBox();
             this.txtBoxDefaultDirectoryPath = new System.Windows.Forms.TextBox();
             this.btnDirectorySearch = new System.Windows.Forms.Button();
+            this.mskTextBoxProject = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // lblData
@@ -77,6 +77,7 @@
             // 
             // txtBoxCompany
             // 
+            this.txtBoxCompany.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBoxCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxCompany.Location = new System.Drawing.Point(130, 70);
             this.txtBoxCompany.MaxLength = 17;
@@ -84,16 +85,6 @@
             this.txtBoxCompany.Size = new System.Drawing.Size(167, 26);
             this.txtBoxCompany.TabIndex = 3;
             this.txtBoxCompany.TextChanged += new System.EventHandler(this.txtBoxCompany_TextChanged);
-            // 
-            // txtBoxProject
-            // 
-            this.txtBoxProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxProject.Location = new System.Drawing.Point(303, 70);
-            this.txtBoxProject.MaxLength = 8;
-            this.txtBoxProject.Name = "txtBoxProject";
-            this.txtBoxProject.Size = new System.Drawing.Size(85, 26);
-            this.txtBoxProject.TabIndex = 4;
-            this.txtBoxProject.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblProject
             // 
@@ -279,7 +270,7 @@
             this.txtBoxDefaultDirectoryPath.Name = "txtBoxDefaultDirectoryPath";
             this.txtBoxDefaultDirectoryPath.Size = new System.Drawing.Size(131, 26);
             this.txtBoxDefaultDirectoryPath.TabIndex = 29;
-            this.txtBoxDefaultDirectoryPath.Text = "C:\\temp";
+            this.txtBoxDefaultDirectoryPath.Text = "C:\\temp\\";
             // 
             // btnDirectorySearch
             // 
@@ -292,11 +283,23 @@
             this.btnDirectorySearch.Text = "Procurar";
             this.btnDirectorySearch.UseVisualStyleBackColor = true;
             // 
+            // mskTextBoxProject
+            // 
+            this.mskTextBoxProject.Culture = new System.Globalization.CultureInfo("");
+            this.mskTextBoxProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskTextBoxProject.Location = new System.Drawing.Point(303, 69);
+            this.mskTextBoxProject.Mask = "0000.000";
+            this.mskTextBoxProject.Name = "mskTextBoxProject";
+            this.mskTextBoxProject.Size = new System.Drawing.Size(85, 27);
+            this.mskTextBoxProject.TabIndex = 31;
+            this.mskTextBoxProject.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // frmHourControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 464);
+            this.ClientSize = new System.Drawing.Size(591, 464);
+            this.Controls.Add(this.mskTextBoxProject);
             this.Controls.Add(this.btnDirectorySearch);
             this.Controls.Add(this.txtBoxDefaultDirectoryPath);
             this.Controls.Add(this.chkBoxCreateFolder);
@@ -317,7 +320,6 @@
             this.Controls.Add(this.lblStartService);
             this.Controls.Add(this.txtBoxServiceDescription);
             this.Controls.Add(this.lblProject);
-            this.Controls.Add(this.txtBoxProject);
             this.Controls.Add(this.txtBoxCompany);
             this.Controls.Add(this.lblCompany);
             this.Controls.Add(this.lblData);
@@ -337,7 +339,6 @@
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.Label lblCompany;
         private System.Windows.Forms.TextBox txtBoxCompany;
-        private System.Windows.Forms.TextBox txtBoxProject;
         private System.Windows.Forms.Label lblProject;
         private System.Windows.Forms.TextBox txtBoxServiceDescription;
         private System.Windows.Forms.Label lblStartService;
@@ -358,6 +359,7 @@
         private System.Windows.Forms.CheckBox chkBoxCreateFolder;
         private System.Windows.Forms.TextBox txtBoxDefaultDirectoryPath;
         private System.Windows.Forms.Button btnDirectorySearch;
+        private System.Windows.Forms.MaskedTextBox mskTextBoxProject;
     }
 }
 

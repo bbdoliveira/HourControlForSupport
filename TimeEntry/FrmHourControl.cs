@@ -104,7 +104,7 @@ namespace TimeEntry
 
             try
             {
-                string[] lines = { txtBoxDate.Text + " - " + txtBoxCompany.Text + " - " + txtBoxProject.Text + " - " + txtBoxOccurrence.Text + " - Total Horas: " + txtBoxTesteTotalHours.Text + " - " + txtBoxServiceDescription.Text };
+                string[] lines = { txtBoxDate.Text + " - " + txtBoxCompany.Text + " - " + mskTextBoxProject.Text + " - " + txtBoxOccurrence.Text + " - Total Horas: " + txtBoxTesteTotalHours.Text + " - " + txtBoxServiceDescription.Text };
 
                 //string filePath = @"c:\temp\";
                 string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
