@@ -73,22 +73,34 @@ versions of Lorem Ipsum.</p>
 
 # UI Experience
 
-- [ ] Melhorar as cores do aplicativo.
+**Feito**
+
+- [x] Se as Checkbox Inicio e Fim fores desmarcadas serão zeradas.
+
+
+**Fazer**
+- [ ] - [ ] Melhorar as cores do aplicativo.
     - [ ] Tema Dark.
     - [ ] Outros Temas.
 - [ ] Organizar melhor so botões.
 - [ ] Adicionar imagem da logo.
-- [x] Se se as Checkbox Inicio e Fim fores desmarcadas serão zeradas.
+- [ ] Ordenar a propriedade TabIndex das textBox.
+
 
 ---
 
 # Support Functionalities
 
+**Feito**
+
 - [x] Pega data atual (dia/mês/ano).
-    - [ ] Opção de selecionar data.
 - [x] Check box inicio e fim do atendimento.
 - [x] Cálculo de tempo gasto no atendimento.
 - [x] Botão de conclusão do atendimento.
+
+**Fazer**
+
+- [ ] Opção de selecionar data.
     
 ---
 

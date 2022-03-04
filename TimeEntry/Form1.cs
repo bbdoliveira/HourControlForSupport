@@ -72,29 +72,34 @@ namespace TimeEntry
 
         private void btnFinished_Click(object sender, EventArgs e)
         {
-            var dirCompanyName = txtBoxCompany.Text;
-            string dirOccurenceName = txtBoxOccurrence.Text;
-            
-            //Passa o caminho usando o Nome da Empresa + Nº Ocorrência;
-            string directoryPath = @"c:\temp\" + dirCompanyName + @"\" + dirOccurenceName; 
+            if (chkBoxCreateFolder.Checked)
+            {
+                var dirCompanyName = txtBoxCompany.Text;
+                string dirOccurenceName = txtBoxOccurrence.Text;
+                var newDirectoryPatch = txtBoxDefaultDirectoryPath.Text;
 
-            try
-            {
-                //Teste se o diretório exite! Caso exista ele apresenta uma mensagem de erro.
-                if (Directory.Exists(directoryPath))
+                //Passa o caminho usando o Nome da Empresa + Nº Ocorrência;
+                //string directoryPath = @"c:\temp\" + dirCompanyName + @"\" + dirOccurenceName;
+                string directoryPath = newDirectoryPatch + dirCompanyName + @"\" + dirOccurenceName;
+
+                try
                 {
-                    MessageBox.Show("That path axists already.", "Hour Control", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //Teste se o diretório exite! Caso exista ele apresenta uma mensagem de erro.
+                    if (Directory.Exists(directoryPath))
+                    {
+                        MessageBox.Show("That path axists already.", "Hour Control", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        //Cria a pasta e mostra uma mensagem confirmando.
+                        DirectoryInfo di = Directory.CreateDirectory(directoryPath);
+                        MessageBox.Show("Created a folder for your ocurrence.", "Hour Control", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                else
+                catch (Exception error)
                 {
-                    //Cria a pasta e mostra uma mensagem confirmando.
-                    DirectoryInfo di = Directory.CreateDirectory(directoryPath);
-                    MessageBox.Show("Created a folder for your ocurrence.", "Hour Control", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Console.WriteLine("The process failed", error.ToString());
                 }
-            }
-            catch (Exception error)
-            {
-                Console.WriteLine("The process failed", error.ToString());
             }
 
             try
@@ -151,6 +156,26 @@ namespace TimeEntry
             catch (Exception fileError)
             {
                 MessageBox.Show(fileError.ToString(), "Hour Control", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtBoxCompany_TextChanged(object sender, EventArgs e)
+        {
+            txtBoxCompany.Focus();
+            //txtBoxCompany.Text.ToUpper();
+        }
+
+        private void chkBoxCreateFolder_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkBoxCreateFolder.Checked)
+            {
+                txtBoxDefaultDirectoryPath.Enabled = true;
+                btnDirectorySearch.Enabled = true;
+            }
+            else
+            {
+                txtBoxDefaultDirectoryPath.Enabled = false;
+                btnDirectorySearch.Enabled = false;
             }
         }
     }

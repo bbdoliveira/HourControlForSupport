@@ -49,6 +49,9 @@
             this.lblStart = new System.Windows.Forms.Label();
             this.lblEnd = new System.Windows.Forms.Label();
             this.btnFinished = new System.Windows.Forms.Button();
+            this.chkBoxCreateFolder = new System.Windows.Forms.CheckBox();
+            this.txtBoxDefaultDirectoryPath = new System.Windows.Forms.TextBox();
+            this.btnDirectorySearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblData
@@ -76,16 +79,19 @@
             // 
             this.txtBoxCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxCompany.Location = new System.Drawing.Point(130, 70);
+            this.txtBoxCompany.MaxLength = 17;
             this.txtBoxCompany.Name = "txtBoxCompany";
-            this.txtBoxCompany.Size = new System.Drawing.Size(100, 26);
+            this.txtBoxCompany.Size = new System.Drawing.Size(167, 26);
             this.txtBoxCompany.TabIndex = 3;
+            this.txtBoxCompany.TextChanged += new System.EventHandler(this.txtBoxCompany_TextChanged);
             // 
             // txtBoxProject
             // 
             this.txtBoxProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxProject.Location = new System.Drawing.Point(239, 70);
+            this.txtBoxProject.Location = new System.Drawing.Point(303, 70);
+            this.txtBoxProject.MaxLength = 8;
             this.txtBoxProject.Name = "txtBoxProject";
-            this.txtBoxProject.Size = new System.Drawing.Size(75, 26);
+            this.txtBoxProject.Size = new System.Drawing.Size(85, 26);
             this.txtBoxProject.TabIndex = 4;
             this.txtBoxProject.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -93,7 +99,7 @@
             // 
             this.lblProject.AutoSize = true;
             this.lblProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProject.Location = new System.Drawing.Point(238, 43);
+            this.lblProject.Location = new System.Drawing.Point(308, 43);
             this.lblProject.Name = "lblProject";
             this.lblProject.Size = new System.Drawing.Size(66, 20);
             this.lblProject.TabIndex = 5;
@@ -105,7 +111,7 @@
             this.txtBoxServiceDescription.Multiline = true;
             this.txtBoxServiceDescription.Name = "txtBoxServiceDescription";
             this.txtBoxServiceDescription.Size = new System.Drawing.Size(479, 129);
-            this.txtBoxServiceDescription.TabIndex = 6;
+            this.txtBoxServiceDescription.TabIndex = 8;
             // 
             // lblStartService
             // 
@@ -124,7 +130,7 @@
             this.chkBoxServiceStart.Location = new System.Drawing.Point(17, 217);
             this.chkBoxServiceStart.Name = "chkBoxServiceStart";
             this.chkBoxServiceStart.Size = new System.Drawing.Size(15, 14);
-            this.chkBoxServiceStart.TabIndex = 9;
+            this.chkBoxServiceStart.TabIndex = 7;
             this.chkBoxServiceStart.UseVisualStyleBackColor = true;
             this.chkBoxServiceStart.CheckedChanged += new System.EventHandler(this.chkBoxServiceStart_CheckedChanged);
             // 
@@ -135,7 +141,7 @@
             this.chkBoxServiceEnd.Location = new System.Drawing.Point(116, 217);
             this.chkBoxServiceEnd.Name = "chkBoxServiceEnd";
             this.chkBoxServiceEnd.Size = new System.Drawing.Size(15, 14);
-            this.chkBoxServiceEnd.TabIndex = 10;
+            this.chkBoxServiceEnd.TabIndex = 9;
             this.chkBoxServiceEnd.UseVisualStyleBackColor = true;
             this.chkBoxServiceEnd.CheckedChanged += new System.EventHandler(this.chkBoxServiceEnd_CheckedChanged);
             // 
@@ -163,7 +169,7 @@
             // 
             this.lblOccurrence.AutoSize = true;
             this.lblOccurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOccurrence.Location = new System.Drawing.Point(342, 43);
+            this.lblOccurrence.Location = new System.Drawing.Point(433, 43);
             this.lblOccurrence.Name = "lblOccurrence";
             this.lblOccurrence.Size = new System.Drawing.Size(96, 20);
             this.lblOccurrence.TabIndex = 19;
@@ -172,10 +178,10 @@
             // txtBoxOccurrence
             // 
             this.txtBoxOccurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxOccurrence.Location = new System.Drawing.Point(320, 70);
+            this.txtBoxOccurrence.Location = new System.Drawing.Point(394, 70);
             this.txtBoxOccurrence.Name = "txtBoxOccurrence";
             this.txtBoxOccurrence.Size = new System.Drawing.Size(185, 26);
-            this.txtBoxOccurrence.TabIndex = 20;
+            this.txtBoxOccurrence.TabIndex = 5;
             this.txtBoxOccurrence.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBoxServiceStart
@@ -249,16 +255,51 @@
             this.btnFinished.Location = new System.Drawing.Point(348, 207);
             this.btnFinished.Name = "btnFinished";
             this.btnFinished.Size = new System.Drawing.Size(101, 39);
-            this.btnFinished.TabIndex = 29;
+            this.btnFinished.TabIndex = 10;
             this.btnFinished.Text = "Finalizar";
             this.btnFinished.UseVisualStyleBackColor = true;
             this.btnFinished.Click += new System.EventHandler(this.btnFinished_Click);
+            // 
+            // chkBoxCreateFolder
+            // 
+            this.chkBoxCreateFolder.AutoSize = true;
+            this.chkBoxCreateFolder.Location = new System.Drawing.Point(12, 111);
+            this.chkBoxCreateFolder.Name = "chkBoxCreateFolder";
+            this.chkBoxCreateFolder.Size = new System.Drawing.Size(150, 17);
+            this.chkBoxCreateFolder.TabIndex = 6;
+            this.chkBoxCreateFolder.Text = "Criar pasta da ocorrência?";
+            this.chkBoxCreateFolder.UseVisualStyleBackColor = true;
+            this.chkBoxCreateFolder.CheckedChanged += new System.EventHandler(this.chkBoxCreateFolder_CheckedChanged);
+            // 
+            // txtBoxDefaultDirectoryPath
+            // 
+            this.txtBoxDefaultDirectoryPath.Enabled = false;
+            this.txtBoxDefaultDirectoryPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxDefaultDirectoryPath.Location = new System.Drawing.Point(166, 105);
+            this.txtBoxDefaultDirectoryPath.Name = "txtBoxDefaultDirectoryPath";
+            this.txtBoxDefaultDirectoryPath.Size = new System.Drawing.Size(131, 26);
+            this.txtBoxDefaultDirectoryPath.TabIndex = 29;
+            this.txtBoxDefaultDirectoryPath.Text = "C:\\temp";
+            // 
+            // btnDirectorySearch
+            // 
+            this.btnDirectorySearch.Enabled = false;
+            this.btnDirectorySearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDirectorySearch.Location = new System.Drawing.Point(303, 105);
+            this.btnDirectorySearch.Name = "btnDirectorySearch";
+            this.btnDirectorySearch.Size = new System.Drawing.Size(85, 26);
+            this.btnDirectorySearch.TabIndex = 30;
+            this.btnDirectorySearch.Text = "Procurar";
+            this.btnDirectorySearch.UseVisualStyleBackColor = true;
             // 
             // formHourControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 464);
+            this.Controls.Add(this.btnDirectorySearch);
+            this.Controls.Add(this.txtBoxDefaultDirectoryPath);
+            this.Controls.Add(this.chkBoxCreateFolder);
             this.Controls.Add(this.btnFinished);
             this.Controls.Add(this.lblEnd);
             this.Controls.Add(this.lblStart);
@@ -311,6 +352,9 @@
         private System.Windows.Forms.Label lblStart;
         private System.Windows.Forms.Label lblEnd;
         private System.Windows.Forms.Button btnFinished;
+        private System.Windows.Forms.CheckBox chkBoxCreateFolder;
+        private System.Windows.Forms.TextBox txtBoxDefaultDirectoryPath;
+        private System.Windows.Forms.Button btnDirectorySearch;
     }
 }
 
