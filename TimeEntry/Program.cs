@@ -16,7 +16,7 @@ namespace TimeEntry
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formHourControl());
+            Application.Run(new frmHourControl());
         }
     }
 }

@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace TimeEntry
 {
-    public partial class formHourControl : Form
+    public partial class frmHourControl : Form
     {
         DateTime StartService = new DateTime();
         DateTime EndService = new DateTime();
 
-        public formHourControl()
+        public frmHourControl()
         {
             InitializeComponent();
         }

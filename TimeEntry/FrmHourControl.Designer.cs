@@ -1,6 +1,6 @@
 ﻿namespace TimeEntry
 {
-    partial class formHourControl
+    partial class frmHourControl
     {
         /// <summary>
         /// Required designer variable.
@@ -292,7 +292,7 @@
             this.btnDirectorySearch.Text = "Procurar";
             this.btnDirectorySearch.UseVisualStyleBackColor = true;
             // 
-            // formHourControl
+            // frmHourControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -321,7 +321,10 @@
             this.Controls.Add(this.txtBoxCompany);
             this.Controls.Add(this.lblCompany);
             this.Controls.Add(this.lblData);
-            this.Name = "formHourControl";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.Name = "frmHourControl";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Controle de Horas";
             this.Load += new System.EventHandler(this.formHourControl_Load);
             this.ResumeLayout(false);
