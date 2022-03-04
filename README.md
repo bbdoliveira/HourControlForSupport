@@ -79,7 +79,7 @@ versions of Lorem Ipsum.</p>
 
 
 **Fazer**
-- [ ] - [ ] Melhorar as cores do aplicativo.
+- [ ] Melhorar as cores do aplicativo.
     - [ ] Tema Dark.
     - [ ] Outros Temas.
 - [ ] Organizar melhor so botões.
