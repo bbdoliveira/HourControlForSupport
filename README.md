@@ -76,7 +76,7 @@ versions of Lorem Ipsum.</p>
 **Feito**
 
 - [x] Se as Checkbox Inicio e Fim fores desmarcadas serão zeradas.
-
+- [x] Ordenar a propriedade TabIndex das textBox.
 
 **Fazer**
 - [ ] Melhorar as cores do aplicativo.
@@ -84,7 +84,7 @@ versions of Lorem Ipsum.</p>
     - [ ] Outros Temas.
 - [ ] Organizar melhor so botões.
 - [ ] Adicionar imagem da logo.
-- [ ] Ordenar a propriedade TabIndex das textBox.
+
 
 
 ---
