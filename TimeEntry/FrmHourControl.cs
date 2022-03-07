@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimeEntry.Entities;
 
 namespace TimeEntry
 {
@@ -16,6 +17,7 @@ namespace TimeEntry
     {
         DateTime StartService = new DateTime();
         DateTime EndService = new DateTime();
+        HoraDia hora = new HoraDia();
 
         public frmHourControl()
         {
@@ -29,6 +31,7 @@ namespace TimeEntry
                 DateTime start = DateTime.Now;
                 txtBoxServiceStart.Text = DateTime.Now.ToString("HH:mm:ss");
                 StartService = DateTime.Now;
+                //hora = 10;
             }
             else
             {
@@ -51,6 +54,8 @@ namespace TimeEntry
                 string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", horasTrabalhadas.Hours,
                     horasTrabalhadas.Minutes, horasTrabalhadas.Seconds, horasTrabalhadas.Milliseconds / 10);
                 txtBoxTesteTotalHours.Text = elapsedTime;
+
+
             }
             else
             {
