@@ -31,7 +31,8 @@ namespace TimeEntry
                 DateTime start = DateTime.Now;
                 txtBoxServiceStart.Text = DateTime.Now.ToString("HH:mm:ss");
                 StartService = DateTime.Now;
-                //hora = 10;
+                //int teste = 10;
+                //hora = teste;
             }
             else
             {
@@ -81,13 +82,13 @@ namespace TimeEntry
                     //Teste se o diretório exite! Caso exista ele apresenta uma mensagem de erro.
                     if (Directory.Exists(directoryPath))
                     {
-                        MessageBox.Show("That path axists already.", "Hour Control", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("That path axists already.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
                         //Cria a pasta e mostra uma mensagem confirmando.
                         DirectoryInfo di = Directory.CreateDirectory(directoryPath);
-                        MessageBox.Show("Pasta Criada!", "Hour Control", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Pasta Criada!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (Exception error)
@@ -112,7 +113,7 @@ namespace TimeEntry
                         foreach (string line in lines)
                         {
                             sw.WriteLine(line);
-                            MessageBox.Show("Criado arquivo com registro de horas!", "Contorle de Horas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Criado arquivo com registro de horas!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                 }
@@ -123,7 +124,7 @@ namespace TimeEntry
                         foreach (string line in lines)
                         {
                             sw.WriteLine(line);
-                            MessageBox.Show("Seu arquivo de controle de horas foi atualizado!", "Controle de Horas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Seu arquivo de controle de horas foi atualizado!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                 }
