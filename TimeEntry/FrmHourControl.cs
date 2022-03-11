@@ -17,7 +17,6 @@ namespace TimeEntry
     {
         DateTime StartService = new DateTime();
         DateTime EndService = new DateTime();
-        HoraDia hora = new HoraDia();
 
         public frmHourControl()
         {
@@ -31,8 +30,7 @@ namespace TimeEntry
                 DateTime start = DateTime.Now;
                 txtBoxServiceStart.Text = DateTime.Now.ToString("HH:mm:ss");
                 StartService = DateTime.Now;
-                //int teste = 10;
-                //hora = teste;
+                HoraDia TesteObj = new HoraDia(txtBoxDate.Text);
             }
             else
             {
@@ -51,10 +49,14 @@ namespace TimeEntry
             {
                 txtBoxServiceEnd.Text = DateTime.Now.ToString("HH:mm:ss");
                 EndService = DateTime.Now;
-                TimeSpan horasTrabalhadas = EndService.Subtract(StartService);
-                string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", horasTrabalhadas.Hours,
+                //TimeSpan horasTrabalhadas = EndService.Subtract(StartService);
+                TimeControl teste = new TimeControl();
+                teste.TimeWorked();
+                /*string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", horasTrabalhadas.Hours,
                     horasTrabalhadas.Minutes, horasTrabalhadas.Seconds, horasTrabalhadas.Milliseconds / 10);
-                txtBoxTesteTotalHours.Text = elapsedTime;
+                txtBoxTesteTotalHours.Text = elapsedTime;*/
+                //string elapsedTime = teste.ToString()
+                txtBoxTesteTotalHours.Text = teste.TimeWorked().ToString();
 
 
             }

@@ -8,12 +8,12 @@ namespace TimeEntry.Entities
 {
     public class HoraDia
     {
-        public int hora { get; set; }
+        public string hora { get; set; }
 
         public HoraDia()
         {
         }
-        public HoraDia(int hora)
+        public HoraDia(string hora)
         {
             this.hora = hora;
         }
