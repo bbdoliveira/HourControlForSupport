@@ -22,7 +22,7 @@ namespace TimeEntry.Entities
             TesteSpan = testeSpan;
         }
 
-        public TimeSpan TimeWorked()
+        public TimeSpan TimeWorked(DateTime serviceStart, DateTime serviceEnd)
         {
             
 

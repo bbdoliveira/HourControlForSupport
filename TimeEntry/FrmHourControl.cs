@@ -15,8 +15,13 @@ namespace TimeEntry
 {
     public partial class frmHourControl : Form
     {
-        DateTime StartService = new DateTime();
-        DateTime EndService = new DateTime();
+        DateTime StartServiceFirst = new DateTime();
+        DateTime StartServiceSecond = new DateTime();
+        DateTime StartServiceThird = new DateTime();
+
+        DateTime EndServiceFirst = new DateTime();
+        DateTime EndServiceSecond = new DateTime();
+        DateTime EndServiceThird = new DateTime();
 
         public frmHourControl()
         {
@@ -25,16 +30,14 @@ namespace TimeEntry
 
         private void chkBoxServiceStart_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkBoxServiceStart.Checked == true)
+            if (chkBoxServiceStartFirstOcurrence.Checked == true)
             {
-                DateTime start = DateTime.Now;
-                txtBoxServiceStart.Text = DateTime.Now.ToString("HH:mm:ss");
-                StartService = DateTime.Now;
-                HoraDia TesteObj = new HoraDia(txtBoxDate.Text);
+                txtBoxServiceStartFirstOcurrence.Text = DateTime.Now.ToString("HH:mm:ss");
+                StartServiceFirst = DateTime.Now;
             }
             else
             {
-                txtBoxServiceStart.Text = "00:00:00";
+                txtBoxServiceStartFirstOcurrence.Text = "00:00:00";
             }
         }
 
@@ -45,25 +48,88 @@ namespace TimeEntry
 
         private void chkBoxServiceEnd_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkBoxServiceEnd.Checked == true)
+            if (chkBoxServiceEndFirstOcurrence.Checked == true)
             {
-                txtBoxServiceEnd.Text = DateTime.Now.ToString("HH:mm:ss");
-                EndService = DateTime.Now;
-                //TimeSpan horasTrabalhadas = EndService.Subtract(StartService);
-                TimeControl teste = new TimeControl();
-                teste.TimeWorked();
-                /*string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", horasTrabalhadas.Hours,
+                txtBoxServiceEndFirstOcurrence.Text = DateTime.Now.ToString("HH:mm:ss");
+                EndServiceFirst = DateTime.Now;
+                TimeSpan horasTrabalhadas = EndServiceFirst.Subtract(StartServiceFirst);
+                //TimeControl teste = new TimeControl();
+                //teste.TimeWorked(StartService, EndService);
+                //TimeSpan juju = teste.TimeWorked(StartService, EndService);
+                string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", horasTrabalhadas.Hours,
                     horasTrabalhadas.Minutes, horasTrabalhadas.Seconds, horasTrabalhadas.Milliseconds / 10);
-                txtBoxTesteTotalHours.Text = elapsedTime;*/
-                //string elapsedTime = teste.ToString()
-                txtBoxTesteTotalHours.Text = teste.TimeWorked().ToString();
-
-
+                txtBoxTotalHoursFirstOcurrence.Text = elapsedTime;
+                //string elapsedTime = $"{teste:hh\\:mm\\:ss}";
+                txtBoxTotalHoursFirstOcurrence.Text = elapsedTime;
             }
             else
             {
                 //Zera a caixa de EndService caso esteja desmarcado.
-                txtBoxServiceEnd.Text = "00:00:00";
+                txtBoxServiceEndFirstOcurrence.Text = "00:00:00";
+            }
+        }
+
+        private void chkBoxServiceStartSecondOcurrence_CheckedChanged(object sender, EventArgs e)
+        {
+            //Quando marcada Checkbox ele pega a hora atual e coloca do inicio da Segunda ocorrência.
+            if (chkBoxServiceStartSecondOcurrence.Checked == true)
+            {
+                txtBoxServiceStartSecondOcurrence.Text = DateTime.Now.ToString("HH:mm:ss");
+                StartServiceSecond = DateTime.Now;
+            }
+            else
+            {
+                txtBoxServiceStartSecondOcurrence.Text = "00:00:00";
+            }
+        }
+
+        private void chkBoxServiceEndSecondOcurrence_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkBoxServiceEndSecondOcurrence.Checked == true)
+            {
+                txtBoxServiceEndSecondOcurrence.Text = DateTime.Now.ToString("HH:mm:ss");
+                EndServiceSecond = DateTime.Now;
+                TimeSpan horasTrabalhadas = EndServiceSecond.Subtract(StartServiceSecond);
+                string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", horasTrabalhadas.Hours,
+                    horasTrabalhadas.Minutes, horasTrabalhadas.Seconds, horasTrabalhadas.Milliseconds / 10);
+                txtBoxTotalHoursSecondOcurrence.Text = elapsedTime;
+            }
+            else
+            {
+                //Zera a caixa de EndService caso esteja desmarcado.
+                txtBoxServiceEndSecondOcurrence.Text = "00:00:00";
+            }
+        }
+
+        private void chkBoxServiceStartThirdOcurrence_CheckedChanged(object sender, EventArgs e)
+        {
+            //Quando marcada Checkbox ele pega a hora atual e coloca do inicio da Segunda ocorrência.
+            if (chkBoxServiceStartThirdOcurrence.Checked == true)
+            {
+                txtBoxServiceStartThirdOcurrence.Text = DateTime.Now.ToString("HH:mm:ss");
+                StartServiceThird = DateTime.Now;
+            }
+            else
+            {
+                txtBoxServiceStartThirdOcurrence.Text = "00:00:00";
+            }
+        }
+
+        private void chkBoxServiceEndThirdOcurrence_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkBoxServiceEndThirdOcurrence.Checked == true)
+            {
+                txtBoxServiceEndThirdOcurrence.Text = DateTime.Now.ToString("HH:mm:ss");
+                EndServiceThird = DateTime.Now;
+                TimeSpan horasTrabalhadas = EndServiceThird.Subtract(StartServiceThird);
+                string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", horasTrabalhadas.Hours,
+                    horasTrabalhadas.Minutes, horasTrabalhadas.Seconds, horasTrabalhadas.Milliseconds / 10);
+                txtBoxTotalHoursThirdOcurrence.Text = elapsedTime;
+            }
+            else
+            {
+                //Zera a caixa de EndService caso esteja desmarcado.
+                txtBoxServiceEndThirdOcurrence.Text = "00:00:00";
             }
         }
 
@@ -101,7 +167,7 @@ namespace TimeEntry
 
             try
             {
-                string[] lines = { txtBoxDate.Text + " - " + txtBoxCompany.Text + " - " + mskTextBoxProject.Text + " - " + txtBoxOccurrence.Text + " - Total Horas: " + txtBoxTesteTotalHours.Text + " - " + txtBoxServiceDescription.Text };
+                string[] lines = { txtBoxDate.Text + " - " + txtBoxCompany.Text + " - " + mskTextBoxProject.Text + " - " + txtBoxOccurrence.Text + " - Total Horas: " + txtBoxTotalHoursFirstOcurrence.Text + " - " + txtBoxServiceDescription.Text };
 
                 string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                 string fileName = "Marco";

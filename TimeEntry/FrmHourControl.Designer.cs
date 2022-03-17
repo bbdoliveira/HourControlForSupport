@@ -34,24 +34,42 @@
             this.lblProject = new System.Windows.Forms.Label();
             this.txtBoxServiceDescription = new System.Windows.Forms.TextBox();
             this.lblStartService = new System.Windows.Forms.Label();
-            this.chkBoxServiceStart = new System.Windows.Forms.CheckBox();
-            this.chkBoxServiceEnd = new System.Windows.Forms.CheckBox();
+            this.chkBoxServiceStartFirstOcurrence = new System.Windows.Forms.CheckBox();
+            this.chkBoxServiceEndFirstOcurrence = new System.Windows.Forms.CheckBox();
             this.lblServiceDescription = new System.Windows.Forms.Label();
             this.lblTotalHour = new System.Windows.Forms.Label();
             this.lblOccurrence = new System.Windows.Forms.Label();
             this.txtBoxOccurrence = new System.Windows.Forms.TextBox();
-            this.txtBoxServiceStart = new System.Windows.Forms.TextBox();
-            this.txtBoxServiceEnd = new System.Windows.Forms.TextBox();
+            this.txtBoxServiceStartFirstOcurrence = new System.Windows.Forms.TextBox();
+            this.txtBoxServiceEndFirstOcurrence = new System.Windows.Forms.TextBox();
             this.txtBoxDate = new System.Windows.Forms.TextBox();
-            this.txtBoxTesteTotalHours = new System.Windows.Forms.TextBox();
+            this.txtBoxTotalHoursFirstOcurrence = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblStart = new System.Windows.Forms.Label();
             this.lblEnd = new System.Windows.Forms.Label();
-            this.btnFinished = new System.Windows.Forms.Button();
+            this.btnFinishedFirstOcurrence = new System.Windows.Forms.Button();
             this.chkBoxCreateFolder = new System.Windows.Forms.CheckBox();
             this.txtBoxDefaultDirectoryPath = new System.Windows.Forms.TextBox();
             this.btnDirectorySearch = new System.Windows.Forms.Button();
             this.mskTextBoxProject = new System.Windows.Forms.MaskedTextBox();
+            this.btnFinishedSecondOcurrence = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtBoxTotalHoursSecondOcurrence = new System.Windows.Forms.TextBox();
+            this.txtBoxServiceEndSecondOcurrence = new System.Windows.Forms.TextBox();
+            this.txtBoxServiceStartSecondOcurrence = new System.Windows.Forms.TextBox();
+            this.chkBoxServiceEndSecondOcurrence = new System.Windows.Forms.CheckBox();
+            this.chkBoxServiceStartSecondOcurrence = new System.Windows.Forms.CheckBox();
+            this.btnFinishedThirdOcurrence = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtBoxTotalHoursThirdOcurrence = new System.Windows.Forms.TextBox();
+            this.txtBoxServiceEndThirdOcurrence = new System.Windows.Forms.TextBox();
+            this.txtBoxServiceStartThirdOcurrence = new System.Windows.Forms.TextBox();
+            this.chkBoxServiceEndThirdOcurrence = new System.Windows.Forms.CheckBox();
+            this.chkBoxServiceStartThirdOcurrence = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblData
@@ -97,7 +115,7 @@
             // 
             // txtBoxServiceDescription
             // 
-            this.txtBoxServiceDescription.Location = new System.Drawing.Point(19, 314);
+            this.txtBoxServiceDescription.Location = new System.Drawing.Point(19, 374);
             this.txtBoxServiceDescription.Multiline = true;
             this.txtBoxServiceDescription.Name = "txtBoxServiceDescription";
             this.txtBoxServiceDescription.Size = new System.Drawing.Size(479, 129);
@@ -113,33 +131,33 @@
             this.lblStartService.TabIndex = 7;
             this.lblStartService.Text = "Atendimento";
             // 
-            // chkBoxServiceStart
+            // chkBoxServiceStartFirstOcurrence
             // 
-            this.chkBoxServiceStart.AutoSize = true;
-            this.chkBoxServiceStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxServiceStart.Location = new System.Drawing.Point(17, 217);
-            this.chkBoxServiceStart.Name = "chkBoxServiceStart";
-            this.chkBoxServiceStart.Size = new System.Drawing.Size(15, 14);
-            this.chkBoxServiceStart.TabIndex = 7;
-            this.chkBoxServiceStart.UseVisualStyleBackColor = true;
-            this.chkBoxServiceStart.CheckedChanged += new System.EventHandler(this.chkBoxServiceStart_CheckedChanged);
+            this.chkBoxServiceStartFirstOcurrence.AutoSize = true;
+            this.chkBoxServiceStartFirstOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxServiceStartFirstOcurrence.Location = new System.Drawing.Point(17, 211);
+            this.chkBoxServiceStartFirstOcurrence.Name = "chkBoxServiceStartFirstOcurrence";
+            this.chkBoxServiceStartFirstOcurrence.Size = new System.Drawing.Size(15, 14);
+            this.chkBoxServiceStartFirstOcurrence.TabIndex = 7;
+            this.chkBoxServiceStartFirstOcurrence.UseVisualStyleBackColor = true;
+            this.chkBoxServiceStartFirstOcurrence.CheckedChanged += new System.EventHandler(this.chkBoxServiceStart_CheckedChanged);
             // 
-            // chkBoxServiceEnd
+            // chkBoxServiceEndFirstOcurrence
             // 
-            this.chkBoxServiceEnd.AutoSize = true;
-            this.chkBoxServiceEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxServiceEnd.Location = new System.Drawing.Point(116, 217);
-            this.chkBoxServiceEnd.Name = "chkBoxServiceEnd";
-            this.chkBoxServiceEnd.Size = new System.Drawing.Size(15, 14);
-            this.chkBoxServiceEnd.TabIndex = 9;
-            this.chkBoxServiceEnd.UseVisualStyleBackColor = true;
-            this.chkBoxServiceEnd.CheckedChanged += new System.EventHandler(this.chkBoxServiceEnd_CheckedChanged);
+            this.chkBoxServiceEndFirstOcurrence.AutoSize = true;
+            this.chkBoxServiceEndFirstOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxServiceEndFirstOcurrence.Location = new System.Drawing.Point(116, 211);
+            this.chkBoxServiceEndFirstOcurrence.Name = "chkBoxServiceEndFirstOcurrence";
+            this.chkBoxServiceEndFirstOcurrence.Size = new System.Drawing.Size(15, 14);
+            this.chkBoxServiceEndFirstOcurrence.TabIndex = 9;
+            this.chkBoxServiceEndFirstOcurrence.UseVisualStyleBackColor = true;
+            this.chkBoxServiceEndFirstOcurrence.CheckedChanged += new System.EventHandler(this.chkBoxServiceEnd_CheckedChanged);
             // 
             // lblServiceDescription
             // 
             this.lblServiceDescription.AutoSize = true;
             this.lblServiceDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblServiceDescription.Location = new System.Drawing.Point(15, 291);
+            this.lblServiceDescription.Location = new System.Drawing.Point(15, 351);
             this.lblServiceDescription.Name = "lblServiceDescription";
             this.lblServiceDescription.Size = new System.Drawing.Size(226, 20);
             this.lblServiceDescription.TabIndex = 11;
@@ -174,23 +192,23 @@
             this.txtBoxOccurrence.TabIndex = 5;
             this.txtBoxOccurrence.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtBoxServiceStart
+            // txtBoxServiceStartFirstOcurrence
             // 
-            this.txtBoxServiceStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxServiceStart.Location = new System.Drawing.Point(38, 212);
-            this.txtBoxServiceStart.Name = "txtBoxServiceStart";
-            this.txtBoxServiceStart.Size = new System.Drawing.Size(72, 26);
-            this.txtBoxServiceStart.TabIndex = 22;
-            this.txtBoxServiceStart.Text = "00:00:00";
+            this.txtBoxServiceStartFirstOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxServiceStartFirstOcurrence.Location = new System.Drawing.Point(38, 206);
+            this.txtBoxServiceStartFirstOcurrence.Name = "txtBoxServiceStartFirstOcurrence";
+            this.txtBoxServiceStartFirstOcurrence.Size = new System.Drawing.Size(72, 26);
+            this.txtBoxServiceStartFirstOcurrence.TabIndex = 22;
+            this.txtBoxServiceStartFirstOcurrence.Text = "00:00:00";
             // 
-            // txtBoxServiceEnd
+            // txtBoxServiceEndFirstOcurrence
             // 
-            this.txtBoxServiceEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxServiceEnd.Location = new System.Drawing.Point(133, 212);
-            this.txtBoxServiceEnd.Name = "txtBoxServiceEnd";
-            this.txtBoxServiceEnd.Size = new System.Drawing.Size(72, 26);
-            this.txtBoxServiceEnd.TabIndex = 23;
-            this.txtBoxServiceEnd.Text = "00:00:00";
+            this.txtBoxServiceEndFirstOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxServiceEndFirstOcurrence.Location = new System.Drawing.Point(133, 206);
+            this.txtBoxServiceEndFirstOcurrence.Name = "txtBoxServiceEndFirstOcurrence";
+            this.txtBoxServiceEndFirstOcurrence.Size = new System.Drawing.Size(72, 26);
+            this.txtBoxServiceEndFirstOcurrence.TabIndex = 23;
+            this.txtBoxServiceEndFirstOcurrence.Text = "00:00:00";
             // 
             // txtBoxDate
             // 
@@ -201,21 +219,21 @@
             this.txtBoxDate.TabIndex = 24;
             this.txtBoxDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtBoxTesteTotalHours
+            // txtBoxTotalHoursFirstOcurrence
             // 
-            this.txtBoxTesteTotalHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxTesteTotalHours.Location = new System.Drawing.Point(240, 212);
-            this.txtBoxTesteTotalHours.Name = "txtBoxTesteTotalHours";
-            this.txtBoxTesteTotalHours.Size = new System.Drawing.Size(81, 26);
-            this.txtBoxTesteTotalHours.TabIndex = 25;
-            this.txtBoxTesteTotalHours.Text = "00:00:00";
-            this.txtBoxTesteTotalHours.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBoxTotalHoursFirstOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxTotalHoursFirstOcurrence.Location = new System.Drawing.Point(240, 206);
+            this.txtBoxTotalHoursFirstOcurrence.Name = "txtBoxTotalHoursFirstOcurrence";
+            this.txtBoxTotalHoursFirstOcurrence.Size = new System.Drawing.Size(81, 26);
+            this.txtBoxTotalHoursFirstOcurrence.TabIndex = 25;
+            this.txtBoxTotalHoursFirstOcurrence.Text = "00:00:00";
+            this.txtBoxTotalHoursFirstOcurrence.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(214, 215);
+            this.label2.Location = new System.Drawing.Point(214, 209);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(18, 20);
             this.label2.TabIndex = 26;
@@ -224,7 +242,7 @@
             // lblStart
             // 
             this.lblStart.AutoSize = true;
-            this.lblStart.Location = new System.Drawing.Point(53, 196);
+            this.lblStart.Location = new System.Drawing.Point(53, 190);
             this.lblStart.Name = "lblStart";
             this.lblStart.Size = new System.Drawing.Size(34, 13);
             this.lblStart.TabIndex = 27;
@@ -233,22 +251,22 @@
             // lblEnd
             // 
             this.lblEnd.AutoSize = true;
-            this.lblEnd.Location = new System.Drawing.Point(156, 196);
+            this.lblEnd.Location = new System.Drawing.Point(156, 190);
             this.lblEnd.Name = "lblEnd";
             this.lblEnd.Size = new System.Drawing.Size(23, 13);
             this.lblEnd.TabIndex = 28;
             this.lblEnd.Text = "Fim";
             // 
-            // btnFinished
+            // btnFinishedFirstOcurrence
             // 
-            this.btnFinished.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinished.Location = new System.Drawing.Point(348, 207);
-            this.btnFinished.Name = "btnFinished";
-            this.btnFinished.Size = new System.Drawing.Size(101, 39);
-            this.btnFinished.TabIndex = 10;
-            this.btnFinished.Text = "Finalizar";
-            this.btnFinished.UseVisualStyleBackColor = true;
-            this.btnFinished.Click += new System.EventHandler(this.btnFinished_Click);
+            this.btnFinishedFirstOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinishedFirstOcurrence.Location = new System.Drawing.Point(348, 201);
+            this.btnFinishedFirstOcurrence.Name = "btnFinishedFirstOcurrence";
+            this.btnFinishedFirstOcurrence.Size = new System.Drawing.Size(101, 39);
+            this.btnFinishedFirstOcurrence.TabIndex = 10;
+            this.btnFinishedFirstOcurrence.Text = "Finalizar";
+            this.btnFinishedFirstOcurrence.UseVisualStyleBackColor = true;
+            this.btnFinishedFirstOcurrence.Click += new System.EventHandler(this.btnFinished_Click);
             // 
             // chkBoxCreateFolder
             // 
@@ -293,29 +311,223 @@
             this.mskTextBoxProject.TabIndex = 4;
             this.mskTextBoxProject.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btnFinishedSecondOcurrence
+            // 
+            this.btnFinishedSecondOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinishedSecondOcurrence.Location = new System.Drawing.Point(348, 246);
+            this.btnFinishedSecondOcurrence.Name = "btnFinishedSecondOcurrence";
+            this.btnFinishedSecondOcurrence.Size = new System.Drawing.Size(101, 39);
+            this.btnFinishedSecondOcurrence.TabIndex = 33;
+            this.btnFinishedSecondOcurrence.Text = "Finalizar";
+            this.btnFinishedSecondOcurrence.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(156, 235);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 13);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Fim";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(53, 235);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Início";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(214, 254);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(18, 20);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "=";
+            // 
+            // txtBoxTotalHoursSecondOcurrence
+            // 
+            this.txtBoxTotalHoursSecondOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxTotalHoursSecondOcurrence.Location = new System.Drawing.Point(240, 251);
+            this.txtBoxTotalHoursSecondOcurrence.Name = "txtBoxTotalHoursSecondOcurrence";
+            this.txtBoxTotalHoursSecondOcurrence.Size = new System.Drawing.Size(81, 26);
+            this.txtBoxTotalHoursSecondOcurrence.TabIndex = 36;
+            this.txtBoxTotalHoursSecondOcurrence.Text = "00:00:00";
+            this.txtBoxTotalHoursSecondOcurrence.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBoxServiceEndSecondOcurrence
+            // 
+            this.txtBoxServiceEndSecondOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxServiceEndSecondOcurrence.Location = new System.Drawing.Point(133, 251);
+            this.txtBoxServiceEndSecondOcurrence.Name = "txtBoxServiceEndSecondOcurrence";
+            this.txtBoxServiceEndSecondOcurrence.Size = new System.Drawing.Size(72, 26);
+            this.txtBoxServiceEndSecondOcurrence.TabIndex = 35;
+            this.txtBoxServiceEndSecondOcurrence.Text = "00:00:00";
+            // 
+            // txtBoxServiceStartSecondOcurrence
+            // 
+            this.txtBoxServiceStartSecondOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxServiceStartSecondOcurrence.Location = new System.Drawing.Point(38, 251);
+            this.txtBoxServiceStartSecondOcurrence.Name = "txtBoxServiceStartSecondOcurrence";
+            this.txtBoxServiceStartSecondOcurrence.Size = new System.Drawing.Size(72, 26);
+            this.txtBoxServiceStartSecondOcurrence.TabIndex = 34;
+            this.txtBoxServiceStartSecondOcurrence.Text = "00:00:00";
+            // 
+            // chkBoxServiceEndSecondOcurrence
+            // 
+            this.chkBoxServiceEndSecondOcurrence.AutoSize = true;
+            this.chkBoxServiceEndSecondOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxServiceEndSecondOcurrence.Location = new System.Drawing.Point(116, 256);
+            this.chkBoxServiceEndSecondOcurrence.Name = "chkBoxServiceEndSecondOcurrence";
+            this.chkBoxServiceEndSecondOcurrence.Size = new System.Drawing.Size(15, 14);
+            this.chkBoxServiceEndSecondOcurrence.TabIndex = 32;
+            this.chkBoxServiceEndSecondOcurrence.UseVisualStyleBackColor = true;
+            this.chkBoxServiceEndSecondOcurrence.CheckedChanged += new System.EventHandler(this.chkBoxServiceEndSecondOcurrence_CheckedChanged);
+            // 
+            // chkBoxServiceStartSecondOcurrence
+            // 
+            this.chkBoxServiceStartSecondOcurrence.AutoSize = true;
+            this.chkBoxServiceStartSecondOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxServiceStartSecondOcurrence.Location = new System.Drawing.Point(17, 256);
+            this.chkBoxServiceStartSecondOcurrence.Name = "chkBoxServiceStartSecondOcurrence";
+            this.chkBoxServiceStartSecondOcurrence.Size = new System.Drawing.Size(15, 14);
+            this.chkBoxServiceStartSecondOcurrence.TabIndex = 31;
+            this.chkBoxServiceStartSecondOcurrence.UseVisualStyleBackColor = true;
+            this.chkBoxServiceStartSecondOcurrence.CheckedChanged += new System.EventHandler(this.chkBoxServiceStartSecondOcurrence_CheckedChanged);
+            // 
+            // btnFinishedThirdOcurrence
+            // 
+            this.btnFinishedThirdOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinishedThirdOcurrence.Location = new System.Drawing.Point(348, 291);
+            this.btnFinishedThirdOcurrence.Name = "btnFinishedThirdOcurrence";
+            this.btnFinishedThirdOcurrence.Size = new System.Drawing.Size(101, 39);
+            this.btnFinishedThirdOcurrence.TabIndex = 42;
+            this.btnFinishedThirdOcurrence.Text = "Finalizar";
+            this.btnFinishedThirdOcurrence.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(156, 280);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 13);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "Fim";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(53, 280);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.TabIndex = 47;
+            this.label6.Text = "Início";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(214, 299);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(18, 20);
+            this.label7.TabIndex = 46;
+            this.label7.Text = "=";
+            // 
+            // txtBoxTotalHoursThirdOcurrence
+            // 
+            this.txtBoxTotalHoursThirdOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxTotalHoursThirdOcurrence.Location = new System.Drawing.Point(240, 296);
+            this.txtBoxTotalHoursThirdOcurrence.Name = "txtBoxTotalHoursThirdOcurrence";
+            this.txtBoxTotalHoursThirdOcurrence.Size = new System.Drawing.Size(81, 26);
+            this.txtBoxTotalHoursThirdOcurrence.TabIndex = 45;
+            this.txtBoxTotalHoursThirdOcurrence.Text = "00:00:00";
+            this.txtBoxTotalHoursThirdOcurrence.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBoxServiceEndThirdOcurrence
+            // 
+            this.txtBoxServiceEndThirdOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxServiceEndThirdOcurrence.Location = new System.Drawing.Point(133, 296);
+            this.txtBoxServiceEndThirdOcurrence.Name = "txtBoxServiceEndThirdOcurrence";
+            this.txtBoxServiceEndThirdOcurrence.Size = new System.Drawing.Size(72, 26);
+            this.txtBoxServiceEndThirdOcurrence.TabIndex = 44;
+            this.txtBoxServiceEndThirdOcurrence.Text = "00:00:00";
+            // 
+            // txtBoxServiceStartThirdOcurrence
+            // 
+            this.txtBoxServiceStartThirdOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxServiceStartThirdOcurrence.Location = new System.Drawing.Point(38, 296);
+            this.txtBoxServiceStartThirdOcurrence.Name = "txtBoxServiceStartThirdOcurrence";
+            this.txtBoxServiceStartThirdOcurrence.Size = new System.Drawing.Size(72, 26);
+            this.txtBoxServiceStartThirdOcurrence.TabIndex = 43;
+            this.txtBoxServiceStartThirdOcurrence.Text = "00:00:00";
+            // 
+            // chkBoxServiceEndThirdOcurrence
+            // 
+            this.chkBoxServiceEndThirdOcurrence.AutoSize = true;
+            this.chkBoxServiceEndThirdOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxServiceEndThirdOcurrence.Location = new System.Drawing.Point(116, 301);
+            this.chkBoxServiceEndThirdOcurrence.Name = "chkBoxServiceEndThirdOcurrence";
+            this.chkBoxServiceEndThirdOcurrence.Size = new System.Drawing.Size(15, 14);
+            this.chkBoxServiceEndThirdOcurrence.TabIndex = 41;
+            this.chkBoxServiceEndThirdOcurrence.UseVisualStyleBackColor = true;
+            this.chkBoxServiceEndThirdOcurrence.CheckedChanged += new System.EventHandler(this.chkBoxServiceEndThirdOcurrence_CheckedChanged);
+            // 
+            // chkBoxServiceStartThirdOcurrence
+            // 
+            this.chkBoxServiceStartThirdOcurrence.AutoSize = true;
+            this.chkBoxServiceStartThirdOcurrence.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxServiceStartThirdOcurrence.Location = new System.Drawing.Point(17, 301);
+            this.chkBoxServiceStartThirdOcurrence.Name = "chkBoxServiceStartThirdOcurrence";
+            this.chkBoxServiceStartThirdOcurrence.Size = new System.Drawing.Size(15, 14);
+            this.chkBoxServiceStartThirdOcurrence.TabIndex = 40;
+            this.chkBoxServiceStartThirdOcurrence.UseVisualStyleBackColor = true;
+            this.chkBoxServiceStartThirdOcurrence.CheckedChanged += new System.EventHandler(this.chkBoxServiceStartThirdOcurrence_CheckedChanged);
+            // 
             // frmHourControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 464);
+            this.ClientSize = new System.Drawing.Size(591, 529);
+            this.Controls.Add(this.btnFinishedThirdOcurrence);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtBoxTotalHoursThirdOcurrence);
+            this.Controls.Add(this.txtBoxServiceEndThirdOcurrence);
+            this.Controls.Add(this.txtBoxServiceStartThirdOcurrence);
+            this.Controls.Add(this.chkBoxServiceEndThirdOcurrence);
+            this.Controls.Add(this.chkBoxServiceStartThirdOcurrence);
+            this.Controls.Add(this.btnFinishedSecondOcurrence);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtBoxTotalHoursSecondOcurrence);
+            this.Controls.Add(this.txtBoxServiceEndSecondOcurrence);
+            this.Controls.Add(this.txtBoxServiceStartSecondOcurrence);
+            this.Controls.Add(this.chkBoxServiceEndSecondOcurrence);
+            this.Controls.Add(this.chkBoxServiceStartSecondOcurrence);
             this.Controls.Add(this.mskTextBoxProject);
             this.Controls.Add(this.btnDirectorySearch);
             this.Controls.Add(this.txtBoxDefaultDirectoryPath);
             this.Controls.Add(this.chkBoxCreateFolder);
-            this.Controls.Add(this.btnFinished);
+            this.Controls.Add(this.btnFinishedFirstOcurrence);
             this.Controls.Add(this.lblEnd);
             this.Controls.Add(this.lblStart);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtBoxTesteTotalHours);
+            this.Controls.Add(this.txtBoxTotalHoursFirstOcurrence);
             this.Controls.Add(this.txtBoxDate);
-            this.Controls.Add(this.txtBoxServiceEnd);
-            this.Controls.Add(this.txtBoxServiceStart);
+            this.Controls.Add(this.txtBoxServiceEndFirstOcurrence);
+            this.Controls.Add(this.txtBoxServiceStartFirstOcurrence);
             this.Controls.Add(this.txtBoxOccurrence);
             this.Controls.Add(this.lblOccurrence);
             this.Controls.Add(this.lblTotalHour);
             this.Controls.Add(this.lblServiceDescription);
-            this.Controls.Add(this.chkBoxServiceEnd);
-            this.Controls.Add(this.chkBoxServiceStart);
+            this.Controls.Add(this.chkBoxServiceEndFirstOcurrence);
+            this.Controls.Add(this.chkBoxServiceStartFirstOcurrence);
             this.Controls.Add(this.lblStartService);
             this.Controls.Add(this.txtBoxServiceDescription);
             this.Controls.Add(this.lblProject);
@@ -341,24 +553,42 @@
         private System.Windows.Forms.Label lblProject;
         private System.Windows.Forms.TextBox txtBoxServiceDescription;
         private System.Windows.Forms.Label lblStartService;
-        private System.Windows.Forms.CheckBox chkBoxServiceStart;
-        private System.Windows.Forms.CheckBox chkBoxServiceEnd;
+        private System.Windows.Forms.CheckBox chkBoxServiceStartFirstOcurrence;
+        private System.Windows.Forms.CheckBox chkBoxServiceEndFirstOcurrence;
         private System.Windows.Forms.Label lblServiceDescription;
         private System.Windows.Forms.Label lblTotalHour;
         private System.Windows.Forms.Label lblOccurrence;
         private System.Windows.Forms.TextBox txtBoxOccurrence;
-        private System.Windows.Forms.TextBox txtBoxServiceStart;
-        private System.Windows.Forms.TextBox txtBoxServiceEnd;
+        private System.Windows.Forms.TextBox txtBoxServiceStartFirstOcurrence;
+        private System.Windows.Forms.TextBox txtBoxServiceEndFirstOcurrence;
         private System.Windows.Forms.TextBox txtBoxDate;
-        private System.Windows.Forms.TextBox txtBoxTesteTotalHours;
+        private System.Windows.Forms.TextBox txtBoxTotalHoursFirstOcurrence;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblStart;
         private System.Windows.Forms.Label lblEnd;
-        private System.Windows.Forms.Button btnFinished;
+        private System.Windows.Forms.Button btnFinishedFirstOcurrence;
         private System.Windows.Forms.CheckBox chkBoxCreateFolder;
         private System.Windows.Forms.TextBox txtBoxDefaultDirectoryPath;
         private System.Windows.Forms.Button btnDirectorySearch;
         private System.Windows.Forms.MaskedTextBox mskTextBoxProject;
+        private System.Windows.Forms.Button btnFinishedSecondOcurrence;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtBoxTotalHoursSecondOcurrence;
+        private System.Windows.Forms.TextBox txtBoxServiceEndSecondOcurrence;
+        private System.Windows.Forms.TextBox txtBoxServiceStartSecondOcurrence;
+        private System.Windows.Forms.CheckBox chkBoxServiceEndSecondOcurrence;
+        private System.Windows.Forms.CheckBox chkBoxServiceStartSecondOcurrence;
+        private System.Windows.Forms.Button btnFinishedThirdOcurrence;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtBoxTotalHoursThirdOcurrence;
+        private System.Windows.Forms.TextBox txtBoxServiceEndThirdOcurrence;
+        private System.Windows.Forms.TextBox txtBoxServiceStartThirdOcurrence;
+        private System.Windows.Forms.CheckBox chkBoxServiceEndThirdOcurrence;
+        private System.Windows.Forms.CheckBox chkBoxServiceStartThirdOcurrence;
     }
 }
 
