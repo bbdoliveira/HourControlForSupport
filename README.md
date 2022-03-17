@@ -97,10 +97,13 @@ versions of Lorem Ipsum.</p>
 - [x] Check box inicio e fim do atendimento.
 - [x] Cálculo de tempo gasto no atendimento.
 - [x] Botão de conclusão do atendimento.
+- [x] Criado 3 espaços para ocorrências.
 
 **Fazer**
 
 - [ ] Opção de selecionar data.
+- [ ] Criar função que calcula a pausa.
+- [ ] Replicar função do botão finalizar.
     
 ---
 
