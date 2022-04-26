@@ -28,12 +28,24 @@ namespace TimeEntry
             InitializeComponent();
         }
 
+        //Aqui acontece o carregamento do Form Principal.
+        private void formHourControl_Load(object sender, EventArgs e)
+        {
+            txtBoxDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
+            chkBoxServiceEndFirstOcurrence.Enabled = false;
+            chkBoxServiceEndSecondOcurrence.Enabled = false;
+            chkBoxServiceEndThirdOcurrence.Enabled = false;
+        }
+
+        //Verifica se houve mudança na CheckBox Inicio do Trabalho.
         private void chkBoxServiceStart_CheckedChanged(object sender, EventArgs e)
         {
+            //Se ela estiver marcada então ele realiza a tarefa.
             if (chkBoxServiceStartFirstOcurrence.Checked == true)
             {
                 txtBoxServiceStartFirstOcurrence.Text = DateTime.Now.ToString("HH:mm:ss");
                 StartServiceFirst = DateTime.Now;
+                chkBoxServiceEndFirstOcurrence.Enabled = true;
             }
             else
             {
@@ -41,31 +53,33 @@ namespace TimeEntry
             }
         }
 
-        private void formHourControl_Load(object sender, EventArgs e)
-        {
-            txtBoxDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
-        }
-
+        //Verifica se houve mudança na ChekBox de final do trabalho.
         private void chkBoxServiceEnd_CheckedChanged(object sender, EventArgs e)
         {
             if (chkBoxServiceEndFirstOcurrence.Checked == true)
             {
+                //Preenche a txtBox e a variável.
                 txtBoxServiceEndFirstOcurrence.Text = DateTime.Now.ToString("HH:mm:ss");
                 EndServiceFirst = DateTime.Now;
+                
+                //Calcula o tempo de horas trabalhadas subtraindo uma pela outra.
                 TimeSpan horasTrabalhadas = EndServiceFirst.Subtract(StartServiceFirst);
-                //TimeControl teste = new TimeControl();
-                //teste.TimeWorked(StartService, EndService);
-                //TimeSpan juju = teste.TimeWorked(StartService, EndService);
-                string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", horasTrabalhadas.Hours,
-                    horasTrabalhadas.Minutes, horasTrabalhadas.Seconds, horasTrabalhadas.Milliseconds / 10);
-                txtBoxTotalHoursFirstOcurrence.Text = elapsedTime;
-                //string elapsedTime = $"{teste:hh\\:mm\\:ss}";
+                string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", horasTrabalhadas.Hours, horasTrabalhadas.Minutes, horasTrabalhadas.Seconds, horasTrabalhadas.Milliseconds / 10);
+                
+                //Mostra na tela o resultado formatado para String.
                 txtBoxTotalHoursFirstOcurrence.Text = elapsedTime;
             }
-            else
+            else if(chkBoxServiceEndFirstOcurrence.Checked == false)
             {
+                DateTime Pause = new DateTime();
+                DateTime TempoTrabalhado = new DateTime();
+
                 //Zera a caixa de EndService caso esteja desmarcado.
                 txtBoxServiceEndFirstOcurrence.Text = "00:00:00";
+                
+                //txtBoxTotalHoursFirstOcurrence.Text = "00:00:00";
+                //MessageBox.Show("O Atendimento precisa ser iniciado", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                //chkBoxServiceEndFirstOcurrence.Checked = false;
             }
         }
 

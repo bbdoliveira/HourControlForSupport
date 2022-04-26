@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TimeEntry.Entities
 {
-    internal class TimeControl
+    class TimeControl
     {
         public DateTime ServiceStart { get; set; }
         public DateTime ServiceEnd { get; set; }
@@ -24,10 +24,7 @@ namespace TimeEntry.Entities
 
         public TimeSpan TimeWorked(DateTime serviceStart, DateTime serviceEnd)
         {
-            
-
-            return ServiceEnd.Subtract(ServiceStart);
-            //return elapsedTime;
+            return serviceEnd.Subtract(serviceStart);
         }
 
         public void MostraTempo()
