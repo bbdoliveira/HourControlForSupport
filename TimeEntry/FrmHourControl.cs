@@ -238,7 +238,21 @@ namespace TimeEntry
 
         private void txtBoxCompany_TextChanged(object sender, EventArgs e)
         {
-            txtBoxCompany.Focus();
+            //txtBoxCompany.Focus();
+            string Company = txtBoxCompany.Text;
+
+            if (txtBoxCompany.Text == "ENESA")
+            {
+                mskTextBoxProject.Text = "0011.001";
+            }
+            else if (txtBoxCompany.Text == "GTM")
+            {
+                mskTextBoxProject.Text = "0515.002";
+            }
+            else
+            {
+                mskTextBoxProject.Text = "";
+            }
         }
 
         private void chkBoxCreateFolder_CheckedChanged(object sender, EventArgs e)
@@ -253,6 +267,32 @@ namespace TimeEntry
                 txtBoxDefaultDirectoryPath.Enabled = false;
                 btnDirectorySearch.Enabled = false;
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //cmbBoxCompany.Focus();
+            string Company = cmbBoxCompany.Text;
+
+            switch (Company)
+            {
+                case "ENESA":
+                    mskTextBoxProject.Text = "0010.001";
+                    break;
+                default:
+                    mskTextBoxProject.Text = "";
+                    break;
+            }
+        }
+
+        private void btnDirectorySearch_Click(object sender, EventArgs e)
+        {
+            folderBrowserDialog1 = new FolderBrowserDialog();
+            string path;
+            folderBrowserDialog1.ShowDialog();
+            path = folderBrowserDialog1.SelectedPath;
+            Console.WriteLine(path);
+            txtBoxDefaultDirectoryPath.Text = path + "\\";
         }
     }
 }
