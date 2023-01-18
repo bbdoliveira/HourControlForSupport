@@ -30,7 +30,6 @@
         {
             this.lblData = new System.Windows.Forms.Label();
             this.lblCompany = new System.Windows.Forms.Label();
-            this.txtBoxCompany = new System.Windows.Forms.TextBox();
             this.lblProject = new System.Windows.Forms.Label();
             this.txtBoxServiceDescription = new System.Windows.Forms.TextBox();
             this.lblStartService = new System.Windows.Forms.Label();
@@ -95,18 +94,6 @@
             this.lblCompany.Size = new System.Drawing.Size(97, 25);
             this.lblCompany.TabIndex = 2;
             this.lblCompany.Text = "Empresa";
-            // 
-            // txtBoxCompany
-            // 
-            this.txtBoxCompany.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtBoxCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxCompany.Location = new System.Drawing.Point(290, 13);
-            this.txtBoxCompany.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBoxCompany.MaxLength = 17;
-            this.txtBoxCompany.Name = "txtBoxCompany";
-            this.txtBoxCompany.Size = new System.Drawing.Size(221, 30);
-            this.txtBoxCompany.TabIndex = 50;
-            this.txtBoxCompany.TextChanged += new System.EventHandler(this.txtBoxCompany_TextChanged);
             // 
             // lblProject
             // 
@@ -542,7 +529,7 @@
             this.cmbBoxCompany.Items.AddRange(new object[] {
             "ENESA",
             "GTM",
-            "HAWS",
+            "HAWS-AVLIS",
             "VOLCAFE",
             "KUMON"});
             this.cmbBoxCompany.Location = new System.Drawing.Point(172, 86);
@@ -596,7 +583,6 @@
             this.Controls.Add(this.lblStartService);
             this.Controls.Add(this.txtBoxServiceDescription);
             this.Controls.Add(this.lblProject);
-            this.Controls.Add(this.txtBoxCompany);
             this.Controls.Add(this.lblCompany);
             this.Controls.Add(this.lblData);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -615,7 +601,6 @@
 
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.Label lblCompany;
-        private System.Windows.Forms.TextBox txtBoxCompany;
         private System.Windows.Forms.Label lblProject;
         private System.Windows.Forms.TextBox txtBoxServiceDescription;
         private System.Windows.Forms.Label lblStartService;

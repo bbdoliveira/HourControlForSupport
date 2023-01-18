@@ -47,8 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\CompanyName.cs" />
     <Compile Include="Entities\HoraDia.cs" />
     <Compile Include="Entities\TimeControl.cs" />
+    <Compile Include="Enums\CompanyContract.cs" />
     <Compile Include="FrmHourControl.cs">
       <SubType>Form</SubType>
     </Compile>
