@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeEntry.Entities;
+using TimeEntry.Enums;
 
 namespace TimeEntry
 {
@@ -151,7 +152,7 @@ namespace TimeEntry
         {
             if (chkBoxCreateFolder.Checked)
             {
-                var dirCompanyName = txtBoxCompany.Text;
+                var dirCompanyName = cmbBoxCompany.Text;
                 string dirOccurenceName = txtBoxOccurrence.Text;
                 var newDirectoryPatch = txtBoxDefaultDirectoryPath.Text;
 
@@ -181,7 +182,7 @@ namespace TimeEntry
 
             try
             {
-                string[] lines = { txtBoxDate.Text + " - " + txtBoxCompany.Text + " - " + mskTextBoxProject.Text + " - " + txtBoxOccurrence.Text + " - Total Horas: " + txtBoxTotalHoursFirstOcurrence.Text + " - " + txtBoxServiceDescription.Text };
+                string[] lines = { txtBoxDate.Text + " - " + cmbBoxCompany.Text + " - " + mskTextBoxProject.Text + " - " + txtBoxOccurrence.Text + " - Total Horas: " + txtBoxTotalHoursFirstOcurrence.Text + " - " + txtBoxServiceDescription.Text };
 
                 string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                 string fileName = "Marco";
@@ -236,25 +237,6 @@ namespace TimeEntry
             }
         }
 
-        private void txtBoxCompany_TextChanged(object sender, EventArgs e)
-        {
-            //txtBoxCompany.Focus();
-            string Company = txtBoxCompany.Text;
-
-            if (txtBoxCompany.Text == "ENESA")
-            {
-                mskTextBoxProject.Text = "0011.001";
-            }
-            else if (txtBoxCompany.Text == "GTM")
-            {
-                mskTextBoxProject.Text = "0515.002";
-            }
-            else
-            {
-                mskTextBoxProject.Text = "";
-            }
-        }
-
         private void chkBoxCreateFolder_CheckedChanged(object sender, EventArgs e)
         {
             if (chkBoxCreateFolder.Checked)
@@ -274,10 +256,17 @@ namespace TimeEntry
             //cmbBoxCompany.Focus();
             string Company = cmbBoxCompany.Text;
 
+
             switch (Company)
             {
-                case "ENESA":
-                    mskTextBoxProject.Text = "0010.001";
+                case "ACESSO":
+                    mskTextBoxProject.Text = "0497.003";
+                    break;
+                case "ADIPRENE":
+                    mskTextBoxProject.Text = "0033.001";
+                    break;
+                case "AQUAGENETICS":
+                    mskTextBoxProject.Text = "0616.004";
                     break;
                 default:
                     mskTextBoxProject.Text = "";
