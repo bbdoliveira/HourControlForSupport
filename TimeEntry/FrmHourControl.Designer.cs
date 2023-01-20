@@ -88,7 +88,7 @@
             // 
             this.lblCompany.AutoSize = true;
             this.lblCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompany.Location = new System.Drawing.Point(169, 53);
+            this.lblCompany.Location = new System.Drawing.Point(154, 53);
             this.lblCompany.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompany.Name = "lblCompany";
             this.lblCompany.Size = new System.Drawing.Size(97, 25);
@@ -219,7 +219,7 @@
             this.txtBoxDate.Location = new System.Drawing.Point(16, 86);
             this.txtBoxDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxDate.Name = "txtBoxDate";
-            this.txtBoxDate.Size = new System.Drawing.Size(145, 30);
+            this.txtBoxDate.Size = new System.Drawing.Size(130, 30);
             this.txtBoxDate.TabIndex = 24;
             this.txtBoxDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -524,17 +524,69 @@
             // 
             this.cmbBoxCompany.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.cmbBoxCompany.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbBoxCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBoxCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBoxCompany.FormattingEnabled = true;
             this.cmbBoxCompany.Items.AddRange(new object[] {
+            "",
+            "ACESSO",
+            "ADIPRENE",
+            "AQUAGENETICS",
+            "IGR. DE JESUS CRISTO",
+            "B3 SOCIAL",
+            "B3",
+            "BIZERBA",
+            "BOTOCLINIC",
+            "BUSCHLE & LEPPER",
+            "CELLTRION",
+            "CHARLES RIVER",
+            "COLLIERS",
+            "COOABRIEL",
+            "DANNEMANN",
             "ENESA",
+            "EPHARMA",
+            "FAGRON TECH",
+            "FAGRON",
+            "FERSA",
+            "FIEA",
+            "FOODOLOGY",
+            "GS1 BRASIL",
             "GTM",
             "HAWS-AVLIS",
+            "HERSHEY",
+            "HSO INT MUSTAD",
+            "HSO INT ON RUNNING",
+            "IIMAK",
+            "ITERIS",
+            "JOHNSON",
+            "MAPEI",
+            "MARTIN",
+            "MIMAKI",
+            "MINASUL UCOM",
+            "Nexer AB",
+            "NISSHA METALLIZING",
+            "NORMA DO BRASIL",
+            "OMYA",
+            "RECOVERY",
+            "ROADCARD",
+            "SAENG",
+            "SCANIA",
+            "SERILON",
+            "SIGMA NEXER SUÉCIA",
+            "SINCLAIR",
+            "SIRONA",
+            "SUPORTE",
+            "STECK",
+            "STERICYCLE",
+            "SUPERIOR ENERGY",
+            "SYSCOM KUMON",
+            "SYSCOM",
+            "UNIVERSAL LEAF",
             "VOLCAFE",
-            "KUMON"});
-            this.cmbBoxCompany.Location = new System.Drawing.Point(172, 86);
+            "VÓRTX",
+            "ZANINI"});
+            this.cmbBoxCompany.Location = new System.Drawing.Point(157, 86);
             this.cmbBoxCompany.Name = "cmbBoxCompany";
-            this.cmbBoxCompany.Size = new System.Drawing.Size(221, 33);
+            this.cmbBoxCompany.Size = new System.Drawing.Size(240, 30);
             this.cmbBoxCompany.TabIndex = 3;
             this.cmbBoxCompany.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
