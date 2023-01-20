@@ -253,9 +253,7 @@ namespace TimeEntry
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //cmbBoxCompany.Focus();
             string Company = cmbBoxCompany.Text;
-
 
             switch (Company)
             {
@@ -267,6 +265,165 @@ namespace TimeEntry
                     break;
                 case "AQUAGENETICS":
                     mskTextBoxProject.Text = "0616.004";
+                    break;
+                case "IGR. DE JESUS CRISTO":
+                    mskTextBoxProject.Text = "0445.004";
+                    break;
+                case "B3 SOCIAL":
+                    mskTextBoxProject.Text = "0501.004";
+                    break;
+                case "B3":
+                    mskTextBoxProject.Text = "0501.001";
+                    break;
+                case "BIZERBA":
+                    mskTextBoxProject.Text = "0140.005";
+                    break;
+                case "BOTOCLINIC":
+                    mskTextBoxProject.Text = "0473.004";
+                    break;
+                case "BUSCHLE & LEPPER":
+                    mskTextBoxProject.Text = "0042.008";
+                    break;
+                case "CELLTRION":
+                    mskTextBoxProject.Text = "0482.005";
+                    break;
+                case "CHARLES RIVER":
+                    mskTextBoxProject.Text = "0169.004.001";
+                    break;
+                case "COLLIERS":
+                    mskTextBoxProject.Text = "0481.003";
+                    break;
+                case "COOABRIEL":
+                    mskTextBoxProject.Text = "0563.003";
+                    break;
+                case "DANNEMANN":
+                    mskTextBoxProject.Text = "0011.004";
+                    break;
+                case "ENESA":
+                    mskTextBoxProject.Text = "0010.001";
+                    break;
+                case "EPHARMA":
+                    mskTextBoxProject.Text = "0568.004";
+                    break;
+                case "FAGRON TECH":
+                    mskTextBoxProject.Text = "0431.004";
+                    break;
+                case "FAGRON":
+                    mskTextBoxProject.Text = "0431.006";
+                    break;
+                case "FERSA":
+                    mskTextBoxProject.Text = "0520.006";
+                    break;
+                case "FIEA":
+                    mskTextBoxProject.Text = "0694.001";
+                    break;
+                case "FOODOLOGY":
+                    mskTextBoxProject.Text = "0629.003";
+                    break;
+                case "GS1 BRASIL":
+                    mskTextBoxProject.Text = "0366.001";
+                    break;
+                case "GTM":
+                    mskTextBoxProject.Text = "0515.002";
+                    break;
+                case "HAWS-AVLIS":
+                    mskTextBoxProject.Text = "0186.001";
+                    break;
+                case "HERSHEY":
+                    mskTextBoxProject.Text = "0623.001";
+                    break;
+                case "HSO INT MUSTAD":
+                    mskTextBoxProject.Text = "0015.006";
+                    break;
+                case "HSO INT ON RUNNING":
+                    mskTextBoxProject.Text = "0015.004";
+                    break;
+                case "IIMAK":
+                    mskTextBoxProject.Text = "0012.005";
+                    break;
+                case "ITERIS":
+                    mskTextBoxProject.Text = "0278.002";
+                    break;
+                case "JOHNSON":
+                    mskTextBoxProject.Text = "0590.001";
+                    break;
+                case "MAPEI":
+                    mskTextBoxProject.Text = "0032.004";
+                    break;
+                case "MARTIN":
+                    mskTextBoxProject.Text = "0025.001";
+                    break;
+                case "MIMAKI":
+                    mskTextBoxProject.Text = "0014.001";
+                    break;
+                case "MINASUL UCOM":
+                    mskTextBoxProject.Text = "0129.016";
+                    break;
+                case "Nexer AB":
+                    mskTextBoxProject.Text = "0649.001";
+                    break;
+                case "NISSHA METALLIZING":
+                    mskTextBoxProject.Text = "0471.003";
+                    break;
+                case "NORMA DO BRASIL":
+                    mskTextBoxProject.Text = "0571.002";
+                    break;
+                case "OMYA":
+                    mskTextBoxProject.Text = "0624.001";
+                    break;
+                case "RECOVERY":
+                    mskTextBoxProject.Text = "0161.008";
+                    break;
+                case "ROADCARD":
+                    mskTextBoxProject.Text = "0083.001";
+                    break;
+                case "SAENG":
+                    mskTextBoxProject.Text = "0068.002";
+                    break;
+                case "SCANIA":
+                    mskTextBoxProject.Text = "0043.009.001";
+                    break;
+                case "SERILON":
+                    mskTextBoxProject.Text = "0049.001";
+                    break;
+                case "SIGMA NEXER SUÉCIA":
+                    mskTextBoxProject.Text = "0043.009.003";
+                    break;
+                case "SINCLAIR":
+                    mskTextBoxProject.Text = "0506.003";
+                    break;
+                case "SIRONA":
+                    mskTextBoxProject.Text = "0016.003";
+                    break;
+                case "SUPORTE":
+                    mskTextBoxProject.Text = "9916.003";
+                    break;
+                case "STECK":
+                    mskTextBoxProject.Text = "0703.001";
+                    break;
+                case "STERICYCLE":
+                    mskTextBoxProject.Text = "0045.003";
+                    break;
+                case "SUPERIOR ENERGY":
+                    mskTextBoxProject.Text = "0020.001";
+                    break;
+                case "SYSCOM KUMON":
+                    mskTextBoxProject.Text = "0389.019";
+                    break;
+                case "SYSCOM":
+                    mskTextBoxProject.Text = "0389.014";
+                    break;
+                case "UNIVERSAL LEAF":
+                    mskTextBoxProject.Text = "0369.009";
+                    break;
+                case "VOLCAFE":
+                    mskTextBoxProject.Text = "0516.002";
+                    break;
+                case "VÓRTX":
+                    mskTextBoxProject.Text = "0323.004";
+                    break;
+                case "ZANINI":
+                    mskTextBoxProject.Text = "0391.007";
                     break;
                 default:
                     mskTextBoxProject.Text = "";
