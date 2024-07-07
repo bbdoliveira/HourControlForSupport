@@ -150,6 +150,8 @@ namespace TimeEntry
 
         private void btnFinished_Click(object sender, EventArgs e)
         {
+            string vazio = "";
+            
             if (chkBoxCreateFolder.Checked)
             {
                 var dirCompanyName = cmbBoxCompany.Text;
@@ -185,7 +187,11 @@ namespace TimeEntry
                 string[] lines = { txtBoxDate.Text + " - " + cmbBoxCompany.Text + " - " + mskTextBoxProject.Text + " - " + txtBoxOccurrence.Text + " - Total Horas: " + txtBoxTotalHoursFirstOcurrence.Text + " - " + txtBoxServiceDescription.Text };
 
                 string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                string fileName = "Marco";
+                int month = DateTime.Now.Month;
+                int year = DateTime.Now.Year;
+                string actualMonth = month.ToString();
+                string actualYear = year.ToString();
+                string fileName = "Apontamentos mês " + actualMonth + "-" + actualYear;
 
                 FileInfo fileInfo = new FileInfo(@"c:\temp\" + fileName + ".txt");
 
@@ -235,6 +241,14 @@ namespace TimeEntry
             {
                 MessageBox.Show(fileError.ToString(), "Hour Control", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            cmbBoxCompany.Text = vazio;
+            mskTextBoxProject.Text = vazio;
+            txtBoxOccurrence.Text = vazio;
+            chkBoxServiceStartFirstOcurrence.Checked = false;
+            chkBoxServiceEndFirstOcurrence.Checked = false;
+            txtBoxServiceDescription.Text = vazio;
+
         }
 
         private void chkBoxCreateFolder_CheckedChanged(object sender, EventArgs e)
@@ -263,6 +277,9 @@ namespace TimeEntry
                 case "ADIPRENE":
                     mskTextBoxProject.Text = "0033.001";
                     break;
+                case "APM":
+                    mskTextBoxProject.Text = "0800.001";
+                    break;
                 case "AQUAGENETICS":
                     mskTextBoxProject.Text = "0616.004";
                     break;
@@ -275,8 +292,14 @@ namespace TimeEntry
                 case "B3":
                     mskTextBoxProject.Text = "0501.001";
                     break;
+                case "BIOMEDICAL":
+                    mskTextBoxProject.Text = "0372.014";
+                    break;
                 case "BIZERBA":
                     mskTextBoxProject.Text = "0140.005";
+                    break;
+                case "BOBINEX":
+                    mskTextBoxProject.Text = "0570.006";
                     break;
                 case "BOTOCLINIC":
                     mskTextBoxProject.Text = "0473.004";
@@ -314,8 +337,23 @@ namespace TimeEntry
                 case "FERSA":
                     mskTextBoxProject.Text = "0520.006";
                     break;
+                case "FIBERTEX":
+                    mskTextBoxProject.Text = "0721.001";
+                    break;
                 case "FIEA":
                     mskTextBoxProject.Text = "0694.001";
+                    break;
+                case "FIEAP":
+                    mskTextBoxProject.Text = "0711.001";
+                    break;
+                case "FIEMA":
+                    mskTextBoxProject.Text = "0744.001";
+                    break;
+                case "FIEPA":
+                    mskTextBoxProject.Text = "0719.001";
+                    break;
+                case "FIEPB":
+                    mskTextBoxProject.Text = "0759.001";
                     break;
                 case "FOODOLOGY":
                     mskTextBoxProject.Text = "0629.003";
@@ -341,6 +379,9 @@ namespace TimeEntry
                 case "IIMAK":
                     mskTextBoxProject.Text = "0012.005";
                     break;
+                case "IRRITEC":
+                    mskTextBoxProject.Text = "0485.003";
+	                break;
                 case "ITERIS":
                     mskTextBoxProject.Text = "0278.002";
                     break;
@@ -368,8 +409,14 @@ namespace TimeEntry
                 case "NORMA DO BRASIL":
                     mskTextBoxProject.Text = "0571.002";
                     break;
-                case "OMYA":
+                case "OMYA BRASIL":
                     mskTextBoxProject.Text = "0624.001";
+                    break;
+                case "OMYA CHILE":
+                    mskTextBoxProject.Text = "0624.010";
+                    break;
+                case "OMYA COLOMBIA":
+                    mskTextBoxProject.Text = "0624.011";
                     break;
                 case "RECOVERY":
                     mskTextBoxProject.Text = "0161.008";
@@ -410,9 +457,6 @@ namespace TimeEntry
                 case "SYSCOM KUMON":
                     mskTextBoxProject.Text = "0389.019";
                     break;
-                case "SYSCOM":
-                    mskTextBoxProject.Text = "0389.014";
-                    break;
                 case "UNIVERSAL LEAF":
                     mskTextBoxProject.Text = "0369.009";
                     break;
@@ -439,6 +483,12 @@ namespace TimeEntry
             path = folderBrowserDialog1.SelectedPath;
             Console.WriteLine(path);
             txtBoxDefaultDirectoryPath.Text = path + "\\";
+        }
+
+        private void btnHourFormRegister_Click(object sender, EventArgs e)
+        {
+            frmCustomerRegistration FrmCustRegistration = new frmCustomerRegistration();
+            FrmCustRegistration.Show();
         }
     }
 }
