@@ -150,6 +150,9 @@ namespace TimeEntry
 
         private void btnFinished_Click(object sender, EventArgs e)
         {
+            /*ToDo: Implementar para salvar a hora que começou o atendimento.
+             *      Implementar pra salvar o horario de término do atendimento.
+             */
             string vazio = "";
             
             if (chkBoxCreateFolder.Checked)
