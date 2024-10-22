@@ -577,6 +577,7 @@
             "MIMAKI",
             "MINASUL UCOM",
             "Nexer AB",
+            "NEXER - IMP. CRM",
             "NISSHA METALLIZING",
             "NORMA DO BRASIL",
             "OMYA BRASIL",

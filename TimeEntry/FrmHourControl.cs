@@ -406,6 +406,9 @@ namespace TimeEntry
                 case "Nexer AB":
                     mskTextBoxProject.Text = "0649.001";
                     break;
+                case "NEXER - IMP. CRM":
+                    mskTextBoxProject.Text = "0043.020";
+                    break;
                 case "NISSHA METALLIZING":
                     mskTextBoxProject.Text = "0471.003";
                     break;
